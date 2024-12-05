@@ -10,11 +10,23 @@
     */
 
     //ENTRADA
-
-    
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];   
+    let letIgual = [];  
+    let letVist = [];       
     //PROCESSAMENTO
+    for (let repet = 0; repet < listaDeLetras.length; repet++){
+        let letra = listaDeLetras[repet].toLowerCase()
+        if (letVist.includes(letra) == false) {
+            letVist.push(letra);
+        }else{
+            letIgual.push(letra);
+        }
+        
+    }
+    //SAÍDA
+    alert(`Letras repetidas: ${letIgual.sort()}`);
+
+
 
     
-    //SAÍDA
-
 </script>

@@ -7,11 +7,19 @@
     */
 
     //ENTRADA
+    let nmr = [];
+
 
 
     //PROCESSAMENTO
+    for (let i = 0; i < 5; i++) {
+        let nmrUser = prompt(`Digite o ${i + 1}º número:`)
+        nmr.push(nmrUser);
+        alert(i)
+    }
 
 
     //SAÍDA
-
+    document.write(`O maior numero ditado é: ${nmr.sort((a, b) => b - a)[0]}`)
+    alert(nmr)
 </script>
