@@ -5,11 +5,16 @@
     */
 
     //ENTRADA
-
-
+    let valorInicial = 1000; 
+    let day = 0;
     //PROCESSAMENTO
+    for (let dias = 0;valorInicial<2000; dias++){
+        valorInicial = valorInicial + (valorInicial*0.02);
+        day = dias
+    }
 
 
     //SAÍDA
+    document.write(`levara ${day} dias`);
 
 </script>

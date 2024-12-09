@@ -6,11 +6,19 @@
     */
 
     //ENTRADA
-
     
+    let populacaoCinco = 50000;
+    let populacaoDez = 50000;
+           
     //PROCESSAMENTO
-    
-
+    for (let nmr = 0; nmr < 10; nmr++) {
+        populacaoDez = populacaoDez + (populacaoDez * 0.015);
+    }
+    for (let nmr = 0; nmr < 5; nmr++) {
+        populacaoCinco = populacaoCinco + (populacaoCinco * 0.015);
+    }
     //SAÍDA
+    document.write(`População da cidade após 5 anos: ${populacaoCinco.toFixed(2)}<br>
+    população da cidade após 10 anos: ${populacaoDez.toFixed(2)}`);
 
 </script>

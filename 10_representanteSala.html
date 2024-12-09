@@ -8,11 +8,39 @@
     */
 
     //ENTRADA
-
-
+    let candidatoUm = prompt("Qual o nome do primeiro candidato a representante da sala");
+    let candidatoDois = prompt("Qual o nome do segundo candidato")
+    let candidatoTres = prompt("Qual o nome do terceiro candidato")
+    let quantidadeAlunos = Number(prompt("Quantos alunos votaram?"))
+    let vtCandUm = 0;
+    let vtCandDois = 0;
+    let vtCandTres = 0;
+    let vencedor;
     //PROCESSAMENTO
-
-
+    for (let i = 0; i < quantidadeAlunos; i++) {
+        let voto = prompt(`Voto do aluno ${i + 1}:`);
+        if (voto.toLowerCase() === candidatoUm.toLowerCase()) {
+            vtCandUm++;
+        } else if (voto.toLowerCase() === candidatoDois.toLowerCase()) {
+            vtCandDois++;
+        } else {
+            vtCandTres++;
+        }
+    }
+    if (vtCandUm > vtCandDois && vtCandUm > vtCandTres) {
+        vencedor = candidatoUm;
+    } else if (vtCandDois > vtCandUm && vtCandDois > vtCandTres) {
+        vencedor = candidatoDois;
+    } else {
+        vencedor = candidatoTres;
+    }
+    let porcentagemCandUm = (vtCandUm / quantidadeAlunos) * 100;
+    let porcentagemCandDois = (vtCandDois / quantidadeAlunos) * 100;
+    let porcentagemCandTres = (vtCandTres / quantidadeAlunos) * 100;
     //SAÍDA
-
+    document.write(`Candidato 1: ${vtCandUm} | Porcentagem candidato 1: ${porcentagemCandUm.toFixed(2)}%<br>
+                    Candidato 2: ${vtCandDois} | Porcentagem candidato 2: ${porcentagemCandDois.toFixed(2)}%<br>
+                    Candidato 3: ${vtCandTres} | Porcentagem candidato 3: ${porcentagemCandTres.toFixed(2)}%<br>
+                    Total de votantes: ${quantidadeAlunos}<br>
+                    Vencedor: ${vencedor}`);
 </script>

@@ -5,11 +5,20 @@
     */
 
     //ENTRADA
-
-
+    let n = 100
+    let multiplo = [];
+    let soma = 0;
     //PROCESSAMENTO
-
+    for (let nmr = 1; nmr <= n; nmr++) {
+        if (nmr % 3 == 0) {
+            multiplo.push(nmr);
+            soma = soma + nmr;
+        }
+    }
 
     //SAÍDA
+    document.write(`Os multiplos de 3 são ${multiplo} <br>
+    a soma deles é ${soma}`);
+
 
 </script>
